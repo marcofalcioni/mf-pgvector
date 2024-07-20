@@ -14,6 +14,8 @@ Several examples of using `pgvector` are in the [examples](examples) folder.
 
 ## Molecule featurizer
 
+Assume we have a db of molecules in a file `molecules.csv` - one SMILES per row.
+
 To run the example:
 
 ```
@@ -21,7 +23,9 @@ docker compose up
 poetry install
 poetry shell
 cd examples
-python chem-feature.py
+python chem-feature.py <query_molecules> molecules.csv
 
 ```
+
+The query molecule is a SMILES string, e.g. `c1ccco1`.
 
